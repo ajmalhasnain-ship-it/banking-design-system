@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Banking Design System — Ajmal Hasnain</title>
+<meta name="description" content="A token-driven banking design system with 80+ components, light and dark themes, and WCAG-checked colour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="logo" href="index.html">Ajmal Hasnain</a>
+  <ul><li><a href="../onsurity-homepage-redesign/">Onsurity — Homepage Redesign</a></li><li><a href="mailto:design.1@wiom.in">Contact</a></li></ul>
+</div></nav>
+
+<main class="wrap">
+  <section class="hero reveal" style="padding:100px 0 60px">
+    <p class="eyebrow">Case study · Design system</p>
+    <h1>Banking Design System</h1>
+    <p class="lead">A design system built from one token source. It covers two platforms, light and dark themes, and more than 80 components. Banking was the test case because it needs dense data, visible trust and strong accessibility.</p>
+    <p class="credit">Made in collaboration with Satyam Srivastava</p>
+    <dl class="facts">
+      <div><dt>Type</dt><dd>Self-initiated</dd></div>
+      <div><dt>Year</dt><dd>2026</dd></div>
+      <div><dt>Scope</dt><dd>Tokens · Components · Patterns</dd></div>
+      <div><dt>Tool</dt><dd>Figma (variables)</dd></div>
+    </dl>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">At a glance</p>
+    <h2>Built for scale, not just for screens</h2>
+    <div class="stats">
+      <div class="stat"><b>80+</b><span>components, each with a full state matrix</span></div>
+      <div class="stat"><b>11</b><span>steps in every colour ramp, with each pair contrast-checked</span></div>
+      <div class="stat"><b>2×2</b><span>platforms × themes, all generated from a single token set</span></div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">Why banking</p>
+    <h2>The hardest version of the problem</h2>
+    <div class="prose">
+      <p>A banking app combines almost every hard UI case. Tables and charts have to stay readable when they are full of data. Small visual details affect whether people trust the app. Accessibility can't be skipped. Many people check their money late at night, so dark mode matters too.</p>
+      <p>If a system works here, it will work in simpler products.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">Foundations · Colour</p>
+    <h2>Colours by role, not by hex code</h2>
+    <div class="prose">
+      <p>There are nine colour families. Each has eleven steps, and the neutral (mono) ramp has fourteen. Components never use a hex value directly. They use semantic roles such as <strong>primary</strong>, <strong>surface</strong>, <strong>border</strong> and <strong>disabled</strong>. Each role points to a different ramp step in each theme, so switching themes is a single toggle.</p>
+    </div>
+    <div class="figure">
+      <div class="ramps" id="ramps"></div>
+      <p class="figcap">Fig. 01: Sample colour ramps. Every foreground/background pair was checked against WCAG contrast in both themes.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">States</p>
+    <h2>Every interactive part has every state</h2>
+    <div class="prose"><p>Every interactive component has five states: enabled, hover, active, focus and disabled. Each state comes from tokens, so developers never have to guess how a hover should look.</p></div>
+    <div class="figure">
+      <div class="states">
+        <div><div class="btn">Pay</div>Enabled</div>
+        <div><div class="btn h">Pay</div>Hover</div>
+        <div><div class="btn a">Pay</div>Active</div>
+        <div><div class="btn f">Pay</div>Focus</div>
+        <div><div class="btn d">Pay</div>Disabled</div>
+      </div>
+      <div class="states" style="margin-top:14px">
+        <div><div class="btn o">Cancel</div></div>
+        <div><div class="btn o h">Cancel</div></div>
+        <div><div class="btn o a">Cancel</div></div>
+        <div><div class="btn o f">Cancel</div></div>
+        <div><div class="btn o d">Cancel</div></div>
+      </div>
+      <p class="figcap">Fig. 02: Two rows of the button state matrix.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">Library</p>
+    <h2>From chips to charts</h2>
+    <div class="prose"><p>The library starts with small pieces like chips, badges and avatars. It goes up to complex ones such as data tables, charts, date-range pickers and file upload. To test it, four complete pages were built using nothing but system parts.</p></div>
+    <ul class="list">
+      <li><b>Dashboard</b>Balances, recent activity and quick actions</li>
+      <li><b>Calendar</b>Scheduled payments and date-range selection</li>
+      <li><b>Upload</b>Document upload, with progress and error states</li>
+      <li><b>Statistics</b>Spending charts and comparisons by category</li>
+    </ul>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">Dark mode</p>
+    <h2>Solved once, at the token level</h2>
+    <div class="prose"><p>Dark mode isn't a second set of designs. Colour, contrast, shadows and states all come from variables, so every screen works in both themes without fixing screens one by one.</p></div>
+    <div class="figure">
+      <div class="themes">
+        <div class="mock light">
+          <div style="opacity:.6">Total balance</div>
+          <div class="bal">₹ 2,48,560</div>
+          <div class="row"><span>Salary credit</span><span class="pill">+ ₹ 85,000</span></div>
+          <div class="row"><span>Electricity bill</span><span>– ₹ 2,140</span></div>
+          <div class="bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:52%"></span><span style="height:88%"></span><span style="height:60%"></span><span style="height:74%"></span></div>
+        </div>
+        <div class="mock dark">
+          <div style="opacity:.6">Total balance</div>
+          <div class="bal">₹ 2,48,560</div>
+          <div class="row"><span>Salary credit</span><span class="pill">+ ₹ 85,000</span></div>
+          <div class="row"><span>Electricity bill</span><span>– ₹ 2,140</span></div>
+          <div class="bars"><span style="height:40%"></span><span style="height:65%"></span><span style="height:52%"></span><span style="height:88%"></span><span style="height:60%"></span><span style="height:74%"></span></div>
+        </div>
+      </div>
+      <p class="figcap">Fig. 03: The same component in light and dark themes. Only the tokens change.</p>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <p class="eyebrow">Honest limits &amp; next steps</p>
+    <h2>What's still missing</h2>
+    <div class="prose"><p>No product team has used the system yet, so there is no adoption data. The next steps are:</p></div>
+    <ul class="list">
+      <li><b>Token export</b>Generate JSON tokens that developers can use directly</li>
+      <li><b>Versioning</b>Set up a release and change-log process</li>
+      <li><b>Second product</b>Build a different product with it to check that it holds up</li>
+    </ul>
+  </section>
+
+  <div class="next">
+    <span style="color:var(--muted)">Next case study</span>
+    <a href="../onsurity-homepage-redesign/">Onsurity — Homepage Redesign →</a>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Ajmal Hasnain</span><span>In collaboration with Satyam Srivastava</span></div></footer>
+<script src="main.js"></script>
+</body>
+</html>
